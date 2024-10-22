@@ -48,6 +48,14 @@ const Programs: React.FC = () => {
           />
         </Head>
         <Layout>
+          {/* Background Section */}
+          <section
+          className="bg-cover bg-center h-[650px] flex items-center justify-center text-white"
+          style={{
+            backgroundImage: "url('/image 6.png')",
+            fontFamily: "'Caveat Brush', cursive",
+          }}
+          ></section>
           <section className="bg-gradient-to-b from-[#B1AFFF] via-[#B6CCFF] to-[#F7F7F7] py-10">
             <div className="container mx-auto px-5">
               <h1 className="text-3xl font-bold mb-4">Our Programs</h1>

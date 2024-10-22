@@ -1,3 +1,19 @@
+/* styles/tailwind.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply the Caveat Brush font globally */
+body {
+  @apply font-caveat-brush; /* Apply the custom font to the body */
+}
+
+/* Optional: Apply to headings and other elements */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-caveat-brush; /* Apply the custom font to headings */
+}
+
+/* Optional: Apply to paragraphs or other text elements */
+p {
+  @apply font-caveat-brush; /* Apply the custom font to paragraphs */
+}

@@ -28,4 +28,6 @@ export const Default: Story = {
   render: (args) => <Button {...args} />,
 }
 
+// You can also create other stories for different types of buttons
+
 export default meta

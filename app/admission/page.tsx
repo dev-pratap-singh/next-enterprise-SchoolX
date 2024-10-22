@@ -1,35 +1,32 @@
-// import Layout from "components/layout";
-
-// const Admission: React.FC = () => {
-//   return (
-//     <Layout>
-//       <section className="p-10 bg-red-50">
-//         <h1 className="text-3xl font-bold mb-4">Admission Information</h1>
-//         <p className="mt-4 text-lg">
-//           We are excited to welcome new families to Lil Pals! Our admission process is simple and straightforward. Here’s how to apply:
-//         </p>
-//         <ol className="list-decimal ml-6 mt-4">
-//           <li className="mb-2">Fill out the online application form.</li>
-//           <li className="mb-2">Submit the required documents (birth certificate, vaccination records, etc.).</li>
-//           <li className="mb-2">Schedule a visit or virtual tour of the school.</li>
-//           <li className="mb-2">Attend an interview with our admissions team.</li>
-//         </ol>
-//         <p className="mt-4 text-lg">
-//           We look forward to meeting you and your child. For more information, please contact us at <a href="mailto:admissions@lilpals.com" className="text-blue-500">admissions@lilpals.com</a>.
-//         </p>
-//       </section>
-//     </Layout>
-//   );
-// };
-
-// export default Admission;
+"use client"; // Add this line to mark the component as a Client Component
 
 import Layout from "components/layout";
 import Head from 'next/head';
 import Image from "next/image";
-
+import { useState } from "react"; // Import useState
 
 const Admission: React.FC = () => {
+  // State for form fields
+  const [studentName, setStudentName] = useState("");
+  const [parentName, setParentName] = useState("");
+  const [area, setArea] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [program, setProgram] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log({
+      studentName,
+      parentName,
+      area,
+      phone,
+      email,
+      program,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -42,56 +39,68 @@ const Admission: React.FC = () => {
       <Layout>
         {/* Background Section */}
         <section
-          className="bg-cover bg-center h-[650px] flex items-center justify-center text-white"
+          className="bg-cover bg-center h-[650px] flex items-center justify-end text-white"
           style={{
             backgroundImage: "url('/image 12.png')",
             fontFamily: "'Caveat Brush', cursive",
           }}
         >
           {/* Registration Form */}
-          <div className="bg-white p-6 rounded-lg shadow-lg w-[300px] mt-10">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-[300px] mt-10 mr-4"> {/* Added margin-right here */}
             <h2
               className="text-[#e84946] text-2xl mb-4 flex items-center gap-2"
               style={{ fontFamily: "'Caveat Brush', cursive" }}
             >
               Register Now
             </h2>
-            <form action="#">
+            <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Student Name"
                 required
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)} // Update state on change
                 className="w-full p-2 mb-3 border border-gray-300 rounded"
               />
               <input
                 type="text"
                 placeholder="Parent Name"
                 required
+                value={parentName}
+                onChange={(e) => setParentName(e.target.value)} // Update state on change
                 className="w-full p-2 mb-3 border border-gray-300 rounded"
               />
               <input
                 type="text"
                 placeholder="Area you're Located"
                 required
+                value={area}
+                onChange={(e) => setArea(e.target.value)} // Update state on change
                 className="w-full p-2 mb-3 border border-gray-300 rounded"
               />
               <input
                 type="tel"
                 placeholder="Phone No."
                 required
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)} // Update state on change
                 className="w-full p-2 mb-3 border border-gray-300 rounded"
               />
               <input
                 type="email"
                 placeholder="Email Id"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} // Update state on change
                 className="w-full p-2 mb-3 border border-gray-300 rounded"
               />
               <select
                 required
+                value={program}
+                onChange={(e) => setProgram(e.target.value)} // Update state on change
                 className="w-full p-2 mb-3 border border-gray-300 rounded"
               >
-                <option value="" disabled selected>
+                <option value="" disabled>
                   Select Program
                 </option>
                 <option value="program1">Program 1</option>

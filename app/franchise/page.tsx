@@ -1,31 +1,6 @@
-// import Layout from "components/layout";
-
-// const Franchise: React.FC = () => {
-//   return (
-//     <Layout>
-//       <section className="p-10 bg-purple-50">
-//         <h1 className="text-3xl font-bold mb-4">Start a Franchise</h1>
-//         <p className="mt-4 text-lg">
-//           Join the Lil Pals family and become a part of our growing network of pre-schools and daycare centers. Starting a Lil Pals franchise is an opportunity to make a meaningful impact on the lives of young children in your community.
-//         </p>
-//         <p className="mt-4 text-lg">
-//           As a franchise partner, you will receive comprehensive support, including training, marketing materials, and ongoing operational assistance.
-//         </p>
-//         <p className="mt-4 text-lg">
-//           Interested in learning more? Contact us at <a href="mailto:franchise@lilpals.com" className="text-blue-500">franchise@lilpals.com</a> for further details and to discuss available opportunities.
-//         </p>
-//       </section>
-//     </Layout>
-//   );
-// };
-
-// export default Franchise;
-
-
 import Layout from "components/layout";
 import Head from 'next/head';
 import Image from "next/image";
-
 
 const Franchise: React.FC = () => {
   return (
@@ -40,14 +15,14 @@ const Franchise: React.FC = () => {
       <Layout>
         {/* Background Section */}
         <section
-          className="bg-cover bg-center h-[650px] flex items-center justify-center"
+          className="bg-cover bg-center h-[650px] flex items-center justify-end"
           style={{
             backgroundImage: "url('/image 13.png')",
             fontFamily: "'Caveat Brush', cursive",
           }}
         >
           {/* Registration Form */}
-          <div className="bg-white p-6 rounded-lg shadow-lg w-[300px] mt-10">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-[300px] mt-10 mr-10"> {/* Increased mr to mr-10 for more right margin */}
             <h2
               className="text-[#e84946] text-2xl mb-4 flex items-center gap-2"
               style={{ fontFamily: "'Caveat Brush', cursive" }}
@@ -109,11 +84,11 @@ const Franchise: React.FC = () => {
         <section
           className="text-center py-10 px-5"
           style={{
-            background: "linear-gradient(#d8d1ad, #b7b6b9, #6c6f98)",
+            background: "linear-gradient(to bottom, #f8ecd4, #b7b6b9, #6c6f98)",
             fontFamily: "'Caveat Brush', cursive",
           }}
         >
-          <h2 className="text-3xl mb-6">Why you should Partner with us!?</h2>
+          <h2 className="text-4xl mb-6">Why you should Partner with us!?</h2>
           <p className="text-lg leading-relaxed mb-6">
             Join a growing network of educational institutions committed to excellence. By franchising with Lil Pals, you will be part of a brand that is recognized for its innovative approach to education, strong community fit, and proven success in student outcomes.
           </p>
@@ -122,93 +97,101 @@ const Franchise: React.FC = () => {
           </p>
           <h3 className="text-2xl mb-6">How to start a Lil Pals Preschool franchise</h3>
 
-          {/* Steps */}
-          <div className="flex flex-wrap justify-between items-center">
+          {/* Steps Flow */}
+          <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Step 1 */}
-            <div className="text-center p-5 border border-gray-300 m-2 w-full md:w-1/4">
-              <h4 className="text-xl mb-4">Step 1</h4>
+            <div className="relative p-5 border border-gray-300 m-2 w-full md:w-1/5 rounded-lg shadow-lg bg-white">
+              <h4 className="text-2xl mb-4">Step 1</h4>
               <Image
                 src="/multicolored smartphone notifications.png"
                 alt="Preliminary Meeting & Sign Agreement"
-                className="w-24 h-24 mx-auto mb-4"
-                width={250}
-                height={250}
+                className="w-20 h-20 mb-4 mx-auto"
+                width={100}
+                height={100}
               />
-              <p className="text-base">Preliminary Meeting & Sign Agreement</p>
+              <p className="text-lg">Preliminary Meeting & Sign Agreement</p>
+              <div className="absolute top-1/2 left-full transform -translate-y-1/2 md:translate-x-10">
+                
+              </div>
             </div>
 
             {/* Step 2 */}
-            <div className="text-center p-5 border border-gray-300 m-2 w-full md:w-1/4">
-              <h4 className="text-xl mb-4">Step 2</h4>
+            <div className="relative p-5 border border-gray-300 m-2 w-full md:w-1/5 rounded-lg shadow-lg bg-white">
+              <h4 className="text-2xl mb-4">Step 2</h4>
               <Image
                 src="/Searching the web on tablet.png"
                 alt="Building Infrastructure"
-                className="w-24 h-24 mx-auto mb-4"
-                width={250}
-                height={250}
+                className="w-20 h-20 mb-4 mx-auto"
+                width={100}
+                height={100}
               />
-              <p className="text-base">Building Infrastructure</p>
+              <p className="text-lg">Building Infrastructure</p>
+              <div className="absolute top-1/2 left-full transform -translate-y-1/2 md:translate-x-10">
+   
+              </div>
             </div>
 
             {/* Step 3 */}
-            <div className="text-center p-5 border border-gray-300 m-2 w-full md:w-1/4">
-              <h4 className="text-xl mb-4">Step 3</h4>
+            <div className="relative p-5 border border-gray-300 m-2 w-full md:w-1/5 rounded-lg shadow-lg bg-white">
+              <h4 className="text-2xl mb-4">Step 3</h4>
               <Image
                 src="/Loudspeaker and social media marketing.png"
                 alt="Training & Marketing"
-                className="w-24 h-24 mx-auto mb-4"
-                width={250}
-                height={250}
+                className="w-20 h-20 mb-4 mx-auto"
+                width={100}
+                height={100}
               />
-              <p className="text-base">Training & Marketing</p>
+              <p className="text-lg">Training & Marketing</p>
+              <div className="absolute top-1/2 left-full transform -translate-y-1/2 md:translate-x-10">
+              </div>
             </div>
 
             {/* Step 4 */}
-            <div className="text-center p-5 border border-gray-300 m-2 w-full md:w-1/4">
-              <h4 className="text-xl mb-4">Step 4</h4>
+            <div className="relative p-5 border border-gray-300 m-2 w-full md:w-1/5 rounded-lg shadow-lg bg-white">
+              <h4 className="text-2xl mb-4">Step 4</h4>
               <Image
                 src="/Three-quarter view of a blue round check mark icon.png"
-                alt="Ready To Start"
-                className="w-24 h-24 mx-auto mb-4"
-                width={250}
-                height={250}
+                alt="Ready to Start"
+                className="w-20 h-20 mb-4 mx-auto"
+                width={100}
+                height={100}
               />
-              <p className="text-base">Ready To Start</p>
+              <p className="text-lg">Ready to Start</p>
             </div>
           </div>
 
-          {/* FAQs */}
+          {/* FAQ Section */}
           <div
-            className="mt-10 bg-[#aa6261] max-w-4xl mx-auto p-6 rounded"
+            className="mt-10 bg-[#aa6261] max-w-4xl mx-auto p-6 rounded-lg"
             style={{ fontFamily: "'Caveat Brush', cursive" }}
           >
             <h2 className="text-3xl mb-6">FAQs</h2>
             <div className="text-left">
-              <div className="mb-4">
-                <p className="font-bold text-xl">
+              <details className="mb-4">
+                <summary className="font-bold text-xl cursor-pointer">
                   Are you involved in the recruitment of teachers?
+                </summary>
+                <p className="mt-2 pl-4 text-base">
+                  Yes, we provide assistance in recruiting qualified educators.
                 </p>
-              </div>
-              <div className="mb-4">
-                <p className="font-bold text-xl">
+              </details>
+              <details className="mb-4">
+                <summary className="font-bold text-xl cursor-pointer">
                   Is there ongoing support after the franchise is launched?
+                </summary>
+                <p className="mt-2 pl-4 text-base">
+                  Absolutely! We offer continuous support for marketing, curriculum, and operations.
                 </p>
-              </div>
-              <div className="mb-4">
-                <p className="font-bold text-xl">
-                  How do you assist with site selection and build-out?
-                </p>
-              </div>
-              <div className="mb-4">
-                <p className="font-bold text-xl">
-                  Do you offer transportation services for children?
-                </p>
-              </div>
-              <div className="mb-4">
-                <p className="font-bold text-xl">
+              </details>
+              {/* Add more FAQs similarly */}
+              <details className="mb-4">
+                <summary className="font-bold text-xl cursor-pointer">
                   How much time does it take to set up a Lil Pals?
+                </summary>
+                <p className="mt-2 pl-4 text-base">
+                  Setting up usually takes about 6-8 months from signing to opening.
                 </p>
-              </div>
+              </details>
             </div>
           </div>
         </section>
