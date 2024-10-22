@@ -113,30 +113,35 @@ const Home: React.FC = () => {
 
       {/* Admissions Section */}
       <section className="bg-yellow-50 p-10 text-center rounded-md shadow-md">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col items-center">
-            <div className="text-white py-2 px-4 rounded-lg inline-flex items-center">
-              <Image src="/Group 1.png" alt="Lil Pals Logo" width={60} height={60} />
-              <h2 className="ml-2 font-bold text-xl"></h2>
-            </div>
-            <h2 className="text-3xl font-bold mt-6">
-              Admissions open for <span className="text-red-500">2024-25!!</span>
-            </h2>
-            <button className="mt-4 bg-yellow-500 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-400 transition">
-              Apply Now
-            </button>
-          </div>
-          <div className="flex justify-center">
-            <Image
-              src="/girl and boy sitting on floor and watching tablet.png"
-              alt="Kids playing"
-              width={350}
-              height={250}
-              className="mx-auto"
-            />
-          </div>
-        </div>
-      </section>
+  <div className="grid md:grid-cols-2 gap-8 items-center">
+    <div className="flex flex-col items-center">
+      <div className="text-white py-2 px-4 rounded-lg inline-flex items-center">
+        <Image src="/Group 1.png" alt="Lil Pals Logo" width={60} height={60} />
+        <h2 className="ml-2 font-bold text-xl"></h2>
+      </div>
+      <h2 className="text-3xl font-bold mt-6">
+        Admissions open for <span className="text-red-500">2024-25!!</span>
+      </h2>
+
+      {/* Updated Apply Now Button */}
+      <Link href="/admission" passHref>
+        <button className="mt-4 bg-yellow-500 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-400 transition">
+          Apply Now
+        </button>
+      </Link>
+    </div>
+    <div className="flex justify-center">
+      <Image
+        src="/girl and boy sitting on floor and watching tablet.png"
+        alt="Kids playing"
+        width={350}
+        height={250}
+        className="mx-auto"
+      />
+    </div>
+  </div>
+</section>
+
     </Layout>
   );
 };
